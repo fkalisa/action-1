@@ -9,4 +9,4 @@ jobs:
             - name: list file
               run: ls
             - name: read file
-              run: cay README.md
+              run: cat README.md
