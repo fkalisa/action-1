@@ -16,7 +16,7 @@ jobs:
             - name: generate 
               run: |
                 apt install cowsay
-                cowsay -f dragon "run for cover , I am dragon RAWR ...." > dragon.txt
+                cowsay -f dragon "run for cover , I am dragon RAWR ...." >> dragon.txt
             - name: check if file exist
               run: grep -i "dragon" dragon.txt
             - name: open file
