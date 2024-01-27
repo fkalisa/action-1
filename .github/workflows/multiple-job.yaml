@@ -4,26 +4,11 @@ jobs:
     build_job_1:
         runs-on: ubuntu-latest
         steps:
+
             - name: install cowyay
               run: sudo apt-get install cowsay -y
             - name: generate 
               run: |
                 cowsay -f dragon "run for cover , I am dragon RAWR ...." >> dragon1.txt
-            - name: sleep for 30 secondes
-              run: sleep 30
-    test_job_2:
-        runs-on: ubuntu-latest
-        steps:
-            - name: sleep 10 sec
-              uses: sleep 10
-            - name: check if file exist
-              run: grep -i "dragon" dragon1.txt
 
-    deploy_job_3:
-        runs-on: ubuntu-latest
-        steps:
-            - name: open file
-              run: cat dragon1.txt
-            - name: deploying
-              run: echo "deploying the app..."
               
