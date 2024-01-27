@@ -1,0 +1,10 @@
+name: generate ASCII with script
+on: push
+jobs: 
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: Executing shell script
+              run: ./generate-ascrii-with-script.yaml
