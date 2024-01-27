@@ -19,6 +19,6 @@ jobs:
             - name: check if file exist
               run: grep -i "dragon" dragon.txt
             - name: open file
-              run: cat dragon
+              run: cat dragon.txt
             - name: list files
               run: ls -lrta
