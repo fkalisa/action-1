@@ -12,7 +12,8 @@ jobs:
                   ls
                   cat README.md
             - name: generate 
-              run: cowsay -f dragon "run for cover , I am dragon RAWR ...." >dragon.txt
+              run: |
+                cowsay -f dragon "run for cover , I am dragon RAWR ...." > dragon.txt
 #            - name: welcome message
 #              run: echo "hello world"
 #            - name: list file

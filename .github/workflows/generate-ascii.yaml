@@ -1,0 +1,25 @@
+name: generate ASCII 
+on: push
+jobs: 
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: list and read 
+              run: |
+                  echo "hello world"
+                  ls -alrt
+                  cat README.md
+            - name: install cowyay
+              run: sudo apt-get install cowsay -y
+            - name: generate 
+              run: |
+                apt install cowsay
+                cowsay -f dragon "run for cover , I am dragon RAWR ...." > dragon.txt
+            - name: check if file exist
+              run: grep -i "dragon" dragon.txt
+            - name: open file
+              run: cat dragon
+            - name: list files
+              run: ls -lrta
