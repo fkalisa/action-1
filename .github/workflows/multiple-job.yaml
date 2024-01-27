@@ -11,7 +11,13 @@ jobs:
               run: |
                 cowsay -f dragon "run for cover , I am dragon RAWR ...." >> dragon1.txt
 
-
+    test_job_2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: list
+              run: ls -alrt
+            - name: test if file exists
+              run: grep -i "dragon" dragon1.txt 
     deploy_job_3:
         runs-on: ubuntu-latest
         steps:
