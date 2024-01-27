@@ -18,12 +18,6 @@ jobs:
             - name: check if file exist
               run: grep -i "dragon" dragon1.txt
 
-    deploy_job_3:
-        runs-on: ubuntu-latest
-        steps:
-            - name: open file
-              run: cat dragon1.txt
-            - name: deploying
-              run: echo "deploying the app..."
+
 
               
