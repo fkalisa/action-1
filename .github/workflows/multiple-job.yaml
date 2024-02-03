@@ -10,19 +10,36 @@ jobs:
             - name: generate 
               run: |
                 cowsay -f dragon "run for cover , I am dragon RAWR ...." >> dragon1.txt
+            - name: upload dragon1.txt
+              uses: actions/upload-artifact@v4
+              with:
+                  name: dragon1-txt-file
+                  path: dragon1.txt
 
     test_job_2:
         needs: build_job_1
         runs-on: ubuntu-latest
         steps:
+            - name: download dragon1-text
+              uses: actions/download-artifact@v4
+              with:
+                name: dragon1-txt-file
             - name: list
               run: ls -alrt
+            
+
             - name: test if file exists
               run: grep -i "dragon" dragon1.txt 
+            
     deploy_job_3:
         needs: test_job_2
         runs-on: ubuntu-latest
         steps:
+
+            - name: download dragon1-text
+              uses: actions/download-artifact@v4
+              with:
+                name: dragon1-txt-file
             - name: open file
               run: cat dragon1.txt
             - name: deploying
