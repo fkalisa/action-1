@@ -1,6 +1,6 @@
 name: exploring filters
 on: 
-  forkflow_dispatch:
+  workflow_dispatch:
   #schedule:
   #- cron: "*/25 * * * *"
   push:
