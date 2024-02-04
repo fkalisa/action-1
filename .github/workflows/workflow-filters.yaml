@@ -23,4 +23,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "when the job was executed - event type"
-      run: "when the job was executed - event type - run " ${{ github.event_name }} 
+      run: echo when the job was executed - event type run -  ${{ github.event_name }} 
